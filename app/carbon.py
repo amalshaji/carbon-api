@@ -10,12 +10,12 @@ DOWNLOAD_FOLDER = os.getcwd()
 
 async def get_carbon_page(url: str) -> Tuple[Browser, Page]:
     browser = await launch(
-        defaultViewPort=None,
-        handleSIGINT=False,
-        handleSIGTERM=False,
-        handleSIGHUP=False,
-        headless=True,
-        args=["--no-sandbox", "--disable-setuid-sandbox"],
+        # defaultViewPort=None,
+        # handleSIGINT=False,
+        # handleSIGTERM=False,
+        # handleSIGHUP=False,
+        # headless=True,
+        # args=["--no-sandbox", "--disable-setuid-sandbox"],
     )
     page = await browser.newPage()
     # await page._client.send(
