@@ -15,7 +15,7 @@ api = APIRouter(prefix="/api")
 
 @api.post("/")
 async def grab_screenshot(
-    file: UploadFile = File(None),
+    file: bytes = File(None),
     params: DefaultOptions = Depends(DefaultOptions.as_form),
 ):
     if file is None and (params.code is None or params.code == ""):
@@ -25,8 +25,7 @@ async def grab_screenshot(
         )
 
     if file:
-        code = await file.read()
-        code = code.decode("utf-8")
+        code = file.decode("utf-8")
         code = urllib.parse.quote_plus(code)
         params.code = code
     url = create_url_query(params)
