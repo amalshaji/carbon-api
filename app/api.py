@@ -31,6 +31,6 @@ async def grab_screenshot(
         params.code = code
     url = create_url_query(params)
     filename = uuid.uuid4().hex
-    path = os.getcwd() + f"/{filename}.png"
+    path = f"/tmp/{filename}.png"
     path = await get_image(url, path)
     return FileResponse(path)
