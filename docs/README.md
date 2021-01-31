@@ -29,11 +29,11 @@ Simply send a code snippet or code file as `POST` request to the API endpoint an
 
   - Sending code as a string
 
-  ![code.PNG](code.PNG)
+  ![code.PNG](docs/code.PNG)
 
   - Sending code as a file
 
-  ![file.PNG](file.PNG)
+  ![file.PNG](docs/file.PNG)
 
 ## How it works
 
