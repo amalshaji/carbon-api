@@ -1,9 +1,7 @@
-import os
 import uuid
 import urllib.parse
 
-from fastapi import APIRouter, HTTPException, status, File, UploadFile, Body, Depends
-from fastapi.datastructures import UploadFile
+from fastapi import APIRouter, HTTPException, status, File, Depends
 from fastapi.responses import FileResponse
 
 from app.schema import DefaultOptions
